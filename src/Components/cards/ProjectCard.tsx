@@ -8,7 +8,7 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
   if (project) {
     const images = project.attributes.images.data;
     return (
-      <Reveal projectname={project.attributes.title}>
+      <Reveal>
         <div className="flex-[0.45]">
           <Carousel images={images} />
         </div>

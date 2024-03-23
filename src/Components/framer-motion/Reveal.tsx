@@ -8,13 +8,7 @@ const variants = {
   visible: { opacity: 1 },
 };
 
-export default function Reveal({
-  children,
-  projectname,
-}: {
-  children: React.ReactNode;
-  projectname?: string;
-}) {
+export default function Reveal({ children }: { children: React.ReactNode }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -22,7 +16,6 @@ export default function Reveal({
 
   useEffect(() => {
     if (isInView) {
-      console.log({ projectname, isInView });
       animation.start("visible");
     }
   }, [isInView]);
