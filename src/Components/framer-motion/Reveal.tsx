@@ -3,12 +3,13 @@
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
-const variants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1 },
-};
-
-export default function Reveal({ children }: { children: React.ReactNode }) {
+export default function Reveal({
+  children,
+  index,
+}: {
+  children: React.ReactNode;
+  index: number;
+}) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -20,21 +21,21 @@ export default function Reveal({ children }: { children: React.ReactNode }) {
     }
   }, [isInView]);
 
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
   return (
-    <div
-      ref={ref}
-      style={{ position: "relative", width: "fit-content", overflow: "hidden" }}
+    <motion.div
       className="flex mb-8 flex-col md:flex-row md:odd:flex-row-reverse"
+      variants={variants}
+      initial="hidden"
+      animate={animation}
+      transition={{ delay: 0.025, ease: "easeInOut", duration: 0.5 }}
+      ref={ref}
     >
-      <motion.div
-        className="flex mb-8 flex-col md:flex-row md:odd:flex-row-reverse"
-        variants={variants}
-        initial="hidden"
-        animate={animation}
-        transition={{ delay: 0.025, ease: "easeInOut", duration: 0.5 }}
-      >
-        {children}
-      </motion.div>
-    </div>
+      {children}
+    </motion.div>
   );
 }

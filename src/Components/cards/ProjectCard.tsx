@@ -4,16 +4,22 @@ import Button from "../common/Button";
 import Carousel from "../Carousel";
 import Reveal from "../framer-motion/Reveal";
 
-export default function ProjectCard({ project }: { project: ProjectType }) {
+export default function ProjectCard({
+  project,
+  index,
+}: {
+  project: ProjectType;
+  index: number;
+}) {
   if (project) {
     const images = project.attributes.images.data;
     return (
-      <Reveal>
-        <div className="flex-[0.45]">
+      <Reveal index={index}>
+        <div className="sm:flex-[0.5] flex-1">
           <Carousel images={images} />
         </div>
 
-        <div className="flex flex-[0.55] md:justify-center flex-col gap-8 p-4">
+        <div className="flex sm:flex-[0.5] flex-1 md:justify-center flex-col gap-8 p-4">
           <div className="flex items-center gap-2">
             <img
               src={project.attributes?.icon?.data?.attributes?.url}

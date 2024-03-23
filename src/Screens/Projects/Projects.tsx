@@ -11,8 +11,10 @@ export default async function Projects() {
         Projects
       </h1>
       {projects?.map(
-        (project) =>
-          project && <ProjectCard key={project.id} project={project} />
+        (project, index) =>
+          project && (
+            <ProjectCard key={project.id} project={project} index={index} />
+          )
       )}
     </section>
   );
