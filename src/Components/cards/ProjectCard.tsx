@@ -11,11 +11,6 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
         <div className="flex-[0.45]">
           <Carousel images={images} />
         </div>
-        {/* <img
-          src={project.attributes?.images?.data[0]?.attributes.url}
-          className="rounded-lg w-[100%] md:w-[50%] h-[100%] max-h-[450px]"
-          alt={project.attributes?.title}
-        /> */}
 
         <div className="flex flex-[0.55] md:justify-center flex-col gap-8 p-4">
           <div className="flex items-center gap-2">
