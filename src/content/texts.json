@@ -1,0 +1,42 @@
+[
+  {
+    "id": 5,
+    "attributes": {
+      "name": "hero-title",
+      "text": "MERN Stack Developer",
+      "createdAt": "2024-03-22T23:06:22.056Z",
+      "updatedAt": "2024-03-22T23:06:25.703Z",
+      "publishedAt": "2024-03-22T23:06:25.531Z"
+    }
+  },
+  {
+    "id": 6,
+    "attributes": {
+      "name": "hero-subtitle",
+      "text": "Hi, I'm Utkarsh!",
+      "createdAt": "2024-03-22T23:06:42.281Z",
+      "updatedAt": "2024-03-22T23:06:45.733Z",
+      "publishedAt": "2024-03-22T23:06:45.432Z"
+    }
+  },
+  {
+    "id": 7,
+    "attributes": {
+      "name": "hero-description",
+      "text": "A 17-year-old aspiring Full Stack Web Developer, currently balancing studies while working on projects using the MERN stack wonders with the MERN stack. 🚀",
+      "createdAt": "2024-03-22T23:06:58.103Z",
+      "updatedAt": "2024-03-22T23:07:04.395Z",
+      "publishedAt": "2024-03-22T23:07:04.183Z"
+    }
+  },
+  {
+    "id": 8,
+    "attributes": {
+      "name": "email",
+      "text": "utkarshv995@gmail.com",
+      "createdAt": "2024-03-22T23:07:10.699Z",
+      "updatedAt": "2024-03-22T23:07:13.576Z",
+      "publishedAt": "2024-03-22T23:07:13.396Z"
+    }
+  }
+]

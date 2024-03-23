@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "attributes": {
+      "name": "Instagram",
+      "link": "https://www.instagram.com/uv._.codes",
+      "createdAt": "2024-03-23T01:02:52.819Z",
+      "updatedAt": "2024-03-23T01:03:03.483Z",
+      "publishedAt": "2024-03-23T01:03:03.309Z",
+      "icon": {
+        "data": {
+          "id": 64,
+          "attributes": {
+            "name": "instagram.png",
+            "alternativeText": null,
+            "caption": null,
+            "width": 128,
+            "height": 128,
+            "formats": null,
+            "hash": "instagram_b38363a03e",
+            "ext": ".png",
+            "mime": "image/png",
+            "size": 3.59,
+            "url": "https://res.cloudinary.com/di7b9ifgh/image/upload/v1711135932/instagram_b38363a03e.png",
+            "previewUrl": null,
+            "provider": "cloudinary",
+            "provider_metadata": {
+              "public_id": "instagram_b38363a03e",
+              "resource_type": "image"
+            },
+            "createdAt": "2024-03-23T01:02:12.409Z",
+            "updatedAt": "2024-03-23T01:02:12.409Z"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 2,
+    "attributes": {
+      "name": "LinkedIn",
+      "link": "https://www.linkedin.com/in/utkarsh-verma-8965a7246/",
+      "createdAt": "2024-03-23T01:03:42.466Z",
+      "updatedAt": "2024-03-23T01:03:46.438Z",
+      "publishedAt": "2024-03-23T01:03:46.168Z",
+      "icon": {
+        "data": {
+          "id": 63,
+          "attributes": {
+            "name": "linkedin.png",
+            "alternativeText": null,
+            "caption": null,
+            "width": 128,
+            "height": 128,
+            "formats": null,
+            "hash": "linkedin_112c176c53",
+            "ext": ".png",
+            "mime": "image/png",
+            "size": 2.03,
+            "url": "https://res.cloudinary.com/di7b9ifgh/image/upload/v1711135932/linkedin_112c176c53.png",
+            "previewUrl": null,
+            "provider": "cloudinary",
+            "provider_metadata": {
+              "public_id": "linkedin_112c176c53",
+              "resource_type": "image"
+            },
+            "createdAt": "2024-03-23T01:02:12.178Z",
+            "updatedAt": "2024-03-23T01:02:12.178Z"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 3,
+    "attributes": {
+      "name": "GitHub",
+      "link": "https://github.com/utkarshvr",
+      "createdAt": "2024-03-23T01:04:10.320Z",
+      "updatedAt": "2024-03-23T01:04:14.301Z",
+      "publishedAt": "2024-03-23T01:04:14.045Z",
+      "icon": {
+        "data": {
+          "id": 62,
+          "attributes": {
+            "name": "github.png",
+            "alternativeText": null,
+            "caption": null,
+            "width": 128,
+            "height": 128,
+            "formats": null,
+            "hash": "github_6f56f0dbc8",
+            "ext": ".png",
+            "mime": "image/png",
+            "size": 3.53,
+            "url": "https://res.cloudinary.com/di7b9ifgh/image/upload/v1711135931/github_6f56f0dbc8.png",
+            "previewUrl": null,
+            "provider": "cloudinary",
+            "provider_metadata": {
+              "public_id": "github_6f56f0dbc8",
+              "resource_type": "image"
+            },
+            "createdAt": "2024-03-23T01:02:11.298Z",
+            "updatedAt": "2024-03-23T01:02:11.298Z"
+          }
+        }
+      }
+    }
+  }
+]
