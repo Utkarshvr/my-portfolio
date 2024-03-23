@@ -2,12 +2,13 @@ import ProjectType from "@/types/ProjectType";
 import Tools from "../Tools";
 import Button from "../common/Button";
 import Carousel from "../Carousel";
+import Reveal from "../framer-motion/Reveal";
 
 export default function ProjectCard({ project }: { project: ProjectType }) {
   if (project) {
     const images = project.attributes.images.data;
     return (
-      <div className="flex mb-8 flex-col md:flex-row md:odd:flex-row-reverse">
+      <Reveal projectname={project.attributes.title}>
         <div className="flex-[0.45]">
           <Carousel images={images} />
         </div>
@@ -38,7 +39,7 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
             </Button>
           </div>
         </div>
-      </div>
+      </Reveal>
     );
   }
 }
