@@ -8,6 +8,7 @@ export default function Nav() {
       <div className="flex items-center gap-3">
         {["About", "Work", "Contact"].map((link) => (
           <Link
+            key={link}
             href={`#${link.toLowerCase()}`}
             className="text-sm font-bold text-netrual-200 hover:font-medium transition-all"
           >
