@@ -31,7 +31,7 @@ export default function Reveal({ children }: { children: React.ReactNode }) {
         variants={variants}
         initial="hidden"
         animate={animation}
-        transition={{ delay: 0.15, ease: "easeInOut", duration: 0.4 }}
+        transition={{ delay: 0.025, ease: "easeInOut", duration: 0.5 }}
       >
         {children}
       </motion.div>

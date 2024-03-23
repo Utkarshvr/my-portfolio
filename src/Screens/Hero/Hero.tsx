@@ -3,6 +3,7 @@ import Button from "@/Components/common/Button";
 
 import texts from "@/content/texts.json";
 import links from "@/content/links.json";
+import AutoReveal from "@/Components/framer-motion/AutoReveal";
 
 export default async function Hero() {
   const {
@@ -43,28 +44,47 @@ export default async function Hero() {
       className="px-4 mt-[10vh] py-20 md:py-15 min-h-[92vh] flex flex-col items-center justify-center gap-6"
     >
       <div className="flex max-w-[700px] flex-col gap-4 items-center justify-center">
-        <img
-          src={heroImgLink || "/me.png"}
-          className="w-20 h-20  md:w-[160px] md:h-[160px] rounded-full border-[6px] border-white object-cover"
-        />
+        <AutoReveal delay={0.1}>
+          <img
+            src={heroImgLink || "/me.png"}
+            className="w-20 h-20  md:w-[160px] md:h-[160px] rounded-full border-[6px] border-white object-cover"
+          />
+        </AutoReveal>
 
-        <h6 className="text-sm selection:font-bold text-center md:text-2xl text-neutral-200">
-          {heroSubTitle}
-        </h6>
+        <AutoReveal delay={0.2}>
+          <h6 className="text-sm selection:font-bold text-center md:text-2xl text-neutral-200">
+            {heroSubTitle}
+          </h6>
+        </AutoReveal>
 
-        <h1 className="font-bold text-4xl md:text-6xl text-white text-center">
-          {heroTitle}
-        </h1>
+        <AutoReveal delay={0.3}>
+          <h1 className="font-bold text-4xl md:text-6xl text-white text-center">
+            {heroTitle}
+          </h1>
+        </AutoReveal>
 
-        <p className="text-sm text-neutral-200 md:text-lg text-center">
-          {heroDesc}
-        </p>
+        <AutoReveal delay={0.4}>
+          <p className="text-sm text-neutral-200 md:text-lg text-center">
+            {heroDesc}
+          </p>
+        </AutoReveal>
       </div>
-      <Button isLink download={"Utkarsh CV.pdf"} href={"/Utkarsh CV.pdf"}>
-        Download CV
-      </Button>
+
+      <AutoReveal delay={0.5}>
+        <Button
+          fullWidth
+          isLink
+          download={"Utkarsh CV.pdf"}
+          href={"/Utkarsh CV.pdf"}
+        >
+          Download CV
+        </Button>
+      </AutoReveal>
+
       {/* LINKS */}
-      <SocialLinks />
+      <AutoReveal delay={0.6}>
+        <SocialLinks />
+      </AutoReveal>
     </section>
   );
 }
