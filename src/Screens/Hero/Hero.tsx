@@ -41,18 +41,18 @@ export default async function Hero() {
   return (
     <section
       id="about"
-      className="px-4 mt-[10vh] py-20 md:py-15 min-h-[92vh] flex flex-col items-center justify-center gap-6"
+      className="px-4 mt-[8vh] py-16 md:py-15 min-h-[92vh] flex flex-col items-center justify-center gap-6"
     >
       <div className="flex max-w-[700px] flex-col gap-4 items-center justify-center">
         <AutoReveal delay={0.1}>
           <img
             src={heroImgLink || "/me.png"}
-            className="w-20 h-20  md:w-[160px] md:h-[160px] rounded-full border-[6px] border-white object-cover"
+            className="w-36 h-36 md:w-[200px] md:h-[200px] rounded-full border-[6px] border-white object-cover"
           />
         </AutoReveal>
 
         <AutoReveal delay={0.2}>
-          <h6 className="text-sm selection:font-bold text-center md:text-2xl text-neutral-200">
+          <h6 className="text-sm selection:font-bold text-center md:text-2xl text-neutral-360">
             {heroSubTitle}
           </h6>
         </AutoReveal>
@@ -64,7 +64,7 @@ export default async function Hero() {
         </AutoReveal>
 
         <AutoReveal delay={0.4}>
-          <p className="text-sm text-neutral-200 md:text-lg text-center">
+          <p className="text-sm text-neutral-360 md:text-lg text-center">
             {heroDesc}
           </p>
         </AutoReveal>
