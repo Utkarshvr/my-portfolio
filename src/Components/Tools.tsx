@@ -3,7 +3,7 @@ import ToolType from "@/types/ToolType";
 export default function Tools({ tools }: { tools: ToolType[] }) {
   if (tools)
     return (
-      <div className="flex gap-3 items-center">
+      <div className="flex gap-3 items-center flex-wrap">
         {tools.map(
           (tool) =>
             tool &&
