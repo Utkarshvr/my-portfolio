@@ -1,0 +1,27 @@
+[
+  {
+    "_id": "eru23432eyb23r32yb89",
+    "title": "Frontend ReactJS Developer",
+    "icon": "https://res.cloudinary.com/uv-codes/image/upload/v1718614434/others/bjee0wzmqqpidmvfnbsk.png",
+    "organization": "Inventab",
+    "duration": "Sep 2023 - Jan 2024 (5 months)",
+    "description": [
+      "Inventab is an SAAS based ERP that can be used by organizations to streamline their CRM, SCM, Production, HR, Engineering and other processes.",
+      "Inventab also comes with an eCommerce, Service Ticket Management linked to it. During my internship at Inventab, I developed front-end applications primarily using React JS and collaborated closely with backend developers to ensure seamless integration.",
+      "I integrated APIs into the front-end, transforming data into various formats for improved usability and created numerous graphs to visualize data insights.",
+      "Additionally, I designed and implemented an Employee Attendance System, enhanced overall design for a better user experience, and strengthened user authentication mechanisms."
+    ]
+  },
+  {
+    "_id": "huriw98r32r783238h8",
+    "title": "Full Stack (MERN) Developer",
+    "icon": "https://res.cloudinary.com/uv-codes/image/upload/v1718614433/others/vtyiry1yhubg937sj2vs.png",
+    "organization": "Gawaana",
+    "duration": "Jun 2023 - Aug 2023 (2 months)",
+    "description": [
+      "At Gawaana, I was responsible for migrating an outdated PHP website to a modern React JS framework.",
+      "I built user authentication from scratch to ensure secure access, improved CSS design for a more appealing user interface, and integrated existing APIs for enhanced functionality.",
+      "Furthermore, I optimized app performance for faster load times and increased user click rates through various UI/UX enhancements."
+    ]
+  }
+]

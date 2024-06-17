@@ -7,15 +7,17 @@ export default function Nav() {
       {/* <img src="/logo.png" className="w-12 h-12 rounded-full" /> */}
       <AutoReveal delay={0.7}>
         <div className="flex items-center gap-3">
-          {["About", "Work", "Contact"].map((link) => (
-            <Link
-              key={link}
-              href={`#${link.toLowerCase()}`}
-              className="text-sm font-bold text-netrual-200 hover:font-medium transition-all"
-            >
-              {link}
-            </Link>
-          ))}
+          {["About", "Experience", "Work", "Tech", "Contact"].map(
+            (link) => (
+              <Link
+                key={link}
+                href={`#${link.toLowerCase()}`}
+                className="text-sm font-bold text-netrual-200 hover:font-medium transition-all"
+              >
+                {link}
+              </Link>
+            )
+          )}
         </div>
       </AutoReveal>
     </header>

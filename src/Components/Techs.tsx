@@ -1,5 +1,6 @@
 import techs from "@/content/technologies.json";
 import ToolType from "@/types/ToolType";
+import RevealOnFrame from "./framer-motion/RevealOnFrame";
 
 function getTechsByIndexRange(start: number, end: number) {
   return techs
@@ -19,13 +20,23 @@ export default function Techs() {
   return (
     <>
       <div className="hidden min-[850px]:block">
-        <Techsss filteredTechs={frontendTechs} type="frontend" />
-        <Techsss filteredTechs={backendTechs} type="backend" />
-        <Techsss filteredTechs={uiLibsTechs} type="ui" />
-        <Techsss filteredTechs={authTechs} type="auth" />
+        <RevealOnFrame>
+          <Techsss filteredTechs={frontendTechs} type="frontend" />
+        </RevealOnFrame>
+        <RevealOnFrame>
+          <Techsss filteredTechs={backendTechs} type="backend" />
+        </RevealOnFrame>
+        <RevealOnFrame>
+          <Techsss filteredTechs={uiLibsTechs} type="ui" />
+        </RevealOnFrame>
+        <RevealOnFrame>
+          <Techsss filteredTechs={authTechs} type="auth" />
+        </RevealOnFrame>
       </div>
       <div className="hidden max-[850px]:block">
-        <Techsss filteredTechs={techs} type="auth" />
+        <RevealOnFrame>
+          <Techsss filteredTechs={techs} type="auth" />
+        </RevealOnFrame>
       </div>
     </>
   );
