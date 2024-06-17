@@ -10,7 +10,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <Projects />
-      {/* <Tech /> */}
+      <Tech />
       <Footer />
     </main>
   );

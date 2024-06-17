@@ -8,7 +8,7 @@ export default function Reveal({
   index,
 }: {
   children: React.ReactNode;
-  index: number;
+  index?: number;
 }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
