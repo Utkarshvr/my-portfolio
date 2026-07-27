@@ -5,6 +5,7 @@ import Button from "../common/Button";
 import Carousel from "../Carousel";
 import Reveal from "../framer-motion/Reveal";
 import VideoModal from "../other/VideoModal";
+import { getProjectActions } from "@/lib/projectActions";
 import PROJECT_TYPE from "@/types/PROJECT_TYPE";
 import TOOL_TYPE from "@/types/TOOL_TYPE";
 
@@ -17,21 +18,8 @@ export default function ProjectCard({
   tools: TOOL_TYPE[];
   index: number;
 }) {
-  // Add modal state
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
-  const getCtaText = (type: string) => {
-    const ctaMap: Record<string, string> = {
-      website: "Visit Site",
-      app: "Try App",
-      "landing-page": "View Page",
-      ai: "Launch AI",
-      default: "View Project",
-    };
-    return ctaMap[type] || ctaMap.default;
-  };
-
-  // Updated function to open modal
   const openYTModal = (videoUrl: string) => {
     if (videoUrl) {
       setIsVideoModalOpen(true);
@@ -41,6 +29,7 @@ export default function ProjectCard({
   if (!project) return null;
 
   const images = project.images;
+  const actions = getProjectActions(project);
 
   return (
     <>
@@ -78,7 +67,6 @@ export default function ProjectCard({
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-3 pt-4 border-t border-slate-700/50">
-            {/* Video Demo Button */}
             {project.video_demo && (
               <Button
                 onClick={() => openYTModal(project.video_demo || "")}
@@ -98,31 +86,21 @@ export default function ProjectCard({
               </Button>
             )}
 
-            {project.source_code && (
+            {actions.map((action) => (
               <Button
+                key={`${action.label}-${action.url}`}
                 isLink
-                isSecondary
-                href={project.source_code}
+                isSecondary={action.variant === "secondary"}
+                href={action.url}
                 className="flex-1 min-w-[120px]"
               >
-                Source Code
+                {action.label}
               </Button>
-            )}
-
-            {project.visit_link && (
-              <Button
-                isLink
-                href={project.visit_link}
-                className="flex-1 min-w-[120px]"
-              >
-                {getCtaText(project.type || "default")}
-              </Button>
-            )}
+            ))}
           </div>
         </div>
       </Reveal>
 
-      {/* Video Modal */}
       <VideoModal
         isOpen={isVideoModalOpen}
         onClose={() => setIsVideoModalOpen(false)}
