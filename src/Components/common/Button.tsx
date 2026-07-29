@@ -1,4 +1,9 @@
 import Link from "next/link";
+
+function isExternalHref(href: string): boolean {
+  return /^(https?:|mailto:|tel:)/i.test(href);
+}
+
 export default function Button({
   children,
   download,
@@ -8,6 +13,8 @@ export default function Button({
   fullWidth,
   className,
   onClick,
+  /** Force new tab. Defaults to true for external URLs, false for internal. */
+  openInNewTab,
 }: {
   children: React.ReactNode;
   isSecondary?: boolean;
@@ -17,6 +24,7 @@ export default function Button({
   fullWidth?: boolean;
   className?: string;
   onClick?: () => void;
+  openInNewTab?: boolean;
 }) {
   const commonClasses = `px-4 py-2 ${
     fullWidth ? "w-full" : "w-[50%]"
@@ -27,21 +35,27 @@ export default function Button({
   } transition-all`;
 
   if (isLink) {
+    const url = href || "";
+    const external =
+      openInNewTab ?? (url ? isExternalHref(url) : false);
+
     return (
       <Link
-        href={href || ""}
+        href={url}
         download={download}
-        target="_blank"
+        {...(external
+          ? { target: "_blank", rel: "noopener noreferrer" }
+          : {})}
         className={`flex items-center justify-center ${commonClasses} ${className}`}
       >
         {children}
       </Link>
     );
-  } else {
-    return (
-      <button onClick={onClick} className={`${commonClasses} ${className}`}>
-        {children}
-      </button>
-    );
   }
+
+  return (
+    <button onClick={onClick} className={`${commonClasses} ${className}`}>
+      {children}
+    </button>
+  );
 }

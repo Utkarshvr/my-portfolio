@@ -11,7 +11,7 @@ export default function Nav() {
             (link) => (
               <Link
                 key={link}
-                href={`#${link.toLowerCase()}`}
+                href={`/#${link.toLowerCase()}`}
                 className="text-xs sm:text-sm font-bold text-netrual-200 hover:font-medium transition-all"
               >
                 {link}

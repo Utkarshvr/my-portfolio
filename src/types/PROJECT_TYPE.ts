@@ -30,4 +30,14 @@ export default interface PROJECT_TYPE {
   images?: string[];
   video_demo?: string;
   tools?: string[];
+
+  /**
+   * Optional long-form case study (Markdown). When set, the portfolio shows
+   * an auto secondary CTA linking to `/projects/[case_study_slug]`.
+   */
+  case_study_md?: string;
+  /** URL slug for the case study page (e.g. "budgetwise"). */
+  case_study_slug?: string;
+  /** Label for the auto CTA. Defaults to "View Case Study" on the portfolio. */
+  case_study_cta_label?: string;
 }

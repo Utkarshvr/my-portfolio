@@ -5,7 +5,7 @@ import Button from "../common/Button";
 import Carousel from "../Carousel";
 import Reveal from "../framer-motion/Reveal";
 import VideoModal from "../other/VideoModal";
-import { getProjectActions } from "@/lib/projectActions";
+import { getProjectCardActions } from "@/lib/projectActions";
 import PROJECT_TYPE from "@/types/PROJECT_TYPE";
 import TOOL_TYPE from "@/types/TOOL_TYPE";
 
@@ -29,7 +29,8 @@ export default function ProjectCard({
   if (!project) return null;
 
   const images = project.images;
-  const actions = getProjectActions(project);
+  // Watch Demo → primary actions → secondary (incl. auto case-study CTA)
+  const actions = getProjectCardActions(project);
 
   return (
     <>
@@ -65,7 +66,7 @@ export default function ProjectCard({
             </div>
           )}
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons — order: Demo → primary → secondary */}
           <div className="flex flex-wrap gap-3 pt-4 border-t border-slate-700/50">
             {project.video_demo && (
               <Button
