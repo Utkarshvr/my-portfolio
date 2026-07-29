@@ -25,7 +25,13 @@ export default async function Home() {
   const content_blocks = await getDocs<CONTENT_BLOCK_TYPE>("content-blocks");
   const experience = await getDocs<EXPERIENCE_TYPE>("experience");
 
-  projects = projects.sort((a, b) => (a.position ?? 0) - (b.position ?? 0));
+  projects = projects.sort((a, b) => {
+    const pa = Number(a.position);
+    const pb = Number(b.position);
+    const na = Number.isFinite(pa) ? pa : Number.POSITIVE_INFINITY;
+    const nb = Number.isFinite(pb) ? pb : Number.POSITIVE_INFINITY;
+    return na - nb;
+  });
 
   const testimonial = content_blocks.find(
     (b) => b.title === "testimonial"
